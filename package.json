@@ -1,0 +1,30 @@
+{
+  "name": "dialogflow-cx-webhook-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "start": "functions-framework --target=HandleWebhookRequest",
+    "prestart": "yarn build",
+    "gcp-build": "yarn build"
+  },
+  "keywords": [],
+  "author": "Xavier Portilla Edo",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/dialogflow-cx": "^4.1.0",
+    "@google-cloud/functions-framework": "^3.3.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "typescript": "^5.2.0"
+  },
+  "private": true
+}
