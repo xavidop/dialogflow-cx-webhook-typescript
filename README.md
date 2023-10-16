@@ -21,7 +21,7 @@ The public endpoint of this function is going to have this format:
 
 So imagine that we have deployed this function in `us-central1` and the project `test-cx-346408`, the URL will look like this:
 ```bash
-    https://us-central1-test-cx-346408.cloudfunctions.net/my-agent-function
+    https://us-central1-test-cx-346408.cloudfunctions.net/my-agent-ts-function
 ```
 
 Now the code is ready to be tested on the Console!
