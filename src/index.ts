@@ -3,13 +3,11 @@ import {http, Request, Response} from "@google-cloud/functions-framework";
 import {protos as dftypes} from "@google-cloud/dialogflow-cx";
 
 http("HandleWebhookRequest", (req: Request, res: Response) => {
-  type WebhookRequest = dftypes.google.cloud.dialogflow.cx.v3beta1.WebhookRequest;
-  type WebhookResponse = dftypes.google.cloud.dialogflow.cx.v3beta1.WebhookResponse;
 
-  const body = <WebhookRequest>req.body;
+  const body = <dftypes.google.cloud.dialogflow.cx.v3beta1.IWebhookRequest>req.body;
   console.log(body.languageCode);
 
-  const response: WebhookResponse = new dftypes.google.cloud.dialogflow.cx.v3beta1.WebhookResponse();
+  const response: dftypes.google.cloud.dialogflow.cx.v3beta1.IWebhookResponse = {};
 
   response.fulfillmentResponse = {
     messages: [{
